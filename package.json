@@ -1,0 +1,19 @@
+{
+  "name": "IngrainedQuest",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/exploshubhs/ingrainedQuest",
+  "keywords": [
+    "Ingrained",
+    "Quest"
+  ],
+  "author": "Exploshubhs",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}
