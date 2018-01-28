@@ -1,7 +1,8 @@
 {
+  "productName": "Ingrained Quest",
   "name": "IngrainedQuest",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "An Endeavour To Build Commercial System",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -15,5 +16,21 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "jquery": "^3.3.1",
+    "pg": "^7.4.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.12.9",
+    "require": "^2.4.20",
+    "sql.js": "^0.5.0",
+    "tether": "^1.4.3"
+  },
+  "standard": {
+    "globals": [
+      "$"
+    ]
   }
 }
