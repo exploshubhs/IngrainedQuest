@@ -130,7 +130,9 @@ const globalShortcut = electron.globalShortcut
 const os = require('os')
 const path = require('path')
 const config = require(path.join(__dirname, 'package.json'))
-const model = require(path.join(__dirname, 'app', 'model.js'))
+// const model = require(path.join(__dirname, 'app', 'model.js'))
+const model = require(path.join(__dirname, 'app/model', 'main-model.js'))
+
 const BrowserWindow = electron.BrowserWindow
 var PGconnection = {
   host: 'localhost', // server name or IP address;
@@ -154,7 +156,7 @@ app.on('ready', function () {
   model.connect(PGconnection,
   //model.initDb(app.getPath('userData'),
     // Load a DOM stub here. See renderer.js for the fully composed DOM.
-    mainWindow.loadURL(`file://${__dirname}/app/html/index.html`)
+    mainWindow.loadURL(`file://${__dirname}/app/light/pages-login.html`)
   )
 
   // Enable keyboard shortcuts for Developer Tools on various platforms.

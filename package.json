@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "cheerio": "^1.0.0-rc.2",
+    "eve": "^0.5.4",
     "jquery": "^3.3.1",
     "pg": "^7.4.1",
     "popper": "^1.0.1",
