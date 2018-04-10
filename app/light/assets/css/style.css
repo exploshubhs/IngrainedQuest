@@ -145,6 +145,26 @@ File: Main file css
     min-height: 1040px;
     position: relative; }
 
+
+.content-page-forms {
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  border-left: 7px solid #f5f5f5; }
+  
+  .content-page-forms .content {
+    padding: 0 10px 50px 10px;
+    margin-top: 20px;
+    min-height: 0px;
+    position: relative; }
+
+    .content-page-forms .content .forms {
+      padding: 0 10px 50px 10px;
+      margin-top: 10px;
+      min-height: 0px;
+      position: relative; }
+
+      
 .button-menu-mobile {
   border: none;
   color: rgba(98, 103, 115, 0.7);
@@ -673,6 +693,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-weight: bold;
   border-bottom: 1px solid gainsboro;
+  padding-bottom: 12px;
+  font-size: 18px; }
+
+.header-title-new {
+  margin-top: 0;
+  font-weight: bold;
   padding-bottom: 12px;
   font-size: 18px; }
 

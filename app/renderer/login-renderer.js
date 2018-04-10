@@ -3,6 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const app = require('electron').remote.app
 const cheerio = require('cheerio')
+const config = require(path.join(__dirname,'../../', 'package.json'))
 
 window.$ = window.jQuery = require('jquery')
 window.Tether = require('tether')
@@ -51,9 +52,21 @@ $('document').ready(function () {
       $('#user-login-form').addClass('was-validated')
       let formId = $(e.target).parents('form').attr('id')
       let keyValue = window.view.getFormFieldValues(formId)
-      window.model.authenticateUser('users', keyValue, function () {
-       
-      },window.model.connection)
+      if(window.model.authenticateUser('users', keyValue, function () {},window.model.connection))
+      {
+        // const BrowserWindow = app.BrowserWindow
+        // mainWindow = new BrowserWindow({
+        //   backgroundColor: 'lightgray',
+        //   title: config.productName,
+        //   show: false,
+        //   webPreferences: {
+        //     nodeIntegration: true,
+        //     defaultEncoding: 'UTF-8'
+        //   },
+        //   icon: path.join(__dirname, 'app/icons/trial.png')
+        // })
+        remote.getCurrentWindow().loadURL(`file://${__dirname}/index.html`)
+      }
     }
   })
 })

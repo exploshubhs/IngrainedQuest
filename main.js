@@ -148,10 +148,12 @@ app.on('ready', function () {
     backgroundColor: 'lightgray',
     title: config.productName,
     show: false,
+    webSecurity: false,
     webPreferences: {
       nodeIntegration: true,
       defaultEncoding: 'UTF-8'
-    }
+    },
+    icon: path.join(__dirname, 'app/icons/trial.png')
   })
   model.connect(PGconnection,
   //model.initDb(app.getPath('userData'),

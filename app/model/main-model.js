@@ -645,6 +645,7 @@ module.exports.authenticateUser = function (tableName, keyValue, callback,connec
 {
   if (keyValue.columns.length > 0) 
   {  
+    return new Promise((resolve, reject) => {
       //forming the where clause from the keyValue pair
       var whereClause='';
       let i = 0
@@ -661,12 +662,12 @@ module.exports.authenticateUser = function (tableName, keyValue, callback,connec
 
       var sqlQuery='SELECT count(ID) FROM users where '+whereClause;
       //check if the user with the provided set of credentials exists or not
-      var isRecordExists= this.checkIfRecordExists(sqlQuery,connection);
-      if (isRecordExists)
-          console.log('user exists');
+      if ( this.checkIfRecordExists(sqlQuery,connection))
+          resolve(true);
       else
-          console.log('user does not exists '+ sqlQuery )  ;
-  }
+          resolve(false);;
+  });
+ }
 }
 
 /*
@@ -674,6 +675,7 @@ Common Function To Check If a record exist in the database or not
 */
 module.exports.checkIfRecordExists=function(query,connection)
 {
+  return new Promise((resolve, reject) => {
   var isRecordExists=false;
   var str = this.createConnectUrl(connection);
   pgClient = new pg.Client(str);
@@ -692,15 +694,18 @@ module.exports.checkIfRecordExists=function(query,connection)
                   let row = result.rows
                   if (row !== undefined && row.length > 0) {
                     isRecordExists=true;
+                    resolve(isRecordExists);
                   }
               } catch (error) {
-                  console.log('main-model.checkIfRecordExists', error.message)
+                  console.log('main-model.checkIfRecordExists ', error.message)
               } finally {
  
               }
           }
       });
   });
-  return isRecordExists;
+  resolve(isRecordExists);
+});
+
 }  
 

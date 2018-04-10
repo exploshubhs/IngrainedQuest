@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<head>
+        <meta charset="utf-8" />
+        <title>IngrainedQuest - Invoice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
+        <!-- App css -->
+        <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/style.css" rel="stylesheet" type="text/css" />
+         <link href="../../../assets/css/forms-style.css" rel="stylesheet" type="text/css" />
+        <script src="../../../assets/js/modernizr.min.js"></script>
+        <style>
+        img {
+             display: block;
+            max-width: 100%;
+            height: 105px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="">
+                <!-- Start content -->
+                <div class="content forms">
+                    <div class="container-fluid">
+                            <div class="m-t-40 card-box">
+                                <div class="text-justified">
+                                    <!-- <div class="icon-list-demo row">
+                                        <div class="col-sm-6 col-md-4 col-lg-3" style="margin-left: 10px">
+                                            <a href="../../../index.html">
+                                                <i class="mdi mdi-arrow-left"></i>
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                    <div class="row" style="display: inline;">
+                                            <div class="card-header m-b-20">
+                                                <h2>
+                                                    <i class="mdi mdi-currency-usd"></i>Invoice
+                                                        <div class="pull-left">
+                                                            <a href="../../../index.html">
+                                                                <i class="mdi mdi-arrow-left"></i>
+                                                            </a>        
+                                                        </div>
+                                                        <div class="btn-demo pull-right btn-m-t-m24 edit-action-button m-r-10">
+                                                            <button class="btn btn-primary btn-icon waves-effect waves-circle waves-float">
+                                                                <i class="mdi mdi-check mdi-hc-fw"></i> 
+                                                            </button>
+                                                        </div>
+                                                        <div class="btn-demo pull-right btn-m-t-m24 edit-action-button m-l-10">
+                                                            <button class="btn btn-primary btn-icon waves-effect waves-circle waves-float">
+                                                                <i class="mdi mdi-edit mdi-hc-fw"></i> 
+                                                            </button>
+                                                        </div>
+                                                </h2>
+                                            </div>
+                                    </div>
+                                    <div class="row m-b-20">
+                                        <div class="col-md-1 show">
+                                            <img src="../../../img/d_logo.jpg" class="thumbnail img-responsive" alt="Cinque Terre"  width="110px">
+                                        </div>
+                                        <div class="col-sm-5 show">
+                                            <div class="input-group fg-float">
+                                                <span class="input-group-addon"/>
+                                             <div class="fg-line p-t-5 fg-toggled">
+                                                    <label for="invoiceName" class="fg-label">From</label>
+                                                    <textarea class="form-control" rows="2" id="firmdetails"></textarea>
+                                             </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 show">
+                                            <div class="input-group fg-float">
+                                                <span class="input-group-addon"/>
+                                             <div class="fg-line p-t-5 fg-toggled">
+                                                    <label for="invoiceName" class="fg-label">Bill To Invoice Name</label>
+                                                    <textarea class="form-control" rows="2" id="customerdetails"></textarea>
+                                             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-b-20">
+                                                <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
+                                                    <h3><i class="mdi mdi-details m-l-10  m-r-10"> </i>Basic Details</h3>
+                                                </div>
+                                                <div class="col-xs-12 p-l-30 m-t-20">
+                                                    <div class="col-sm-3 show">
+                                                        <div class="input-group fg-float">
+                                                            <span class="input-group-addon"/>
+                                                            <div class="fg-line p-t-5 fg-toggled">
+                                                                <input type="text"  id="invtype" class="form-control">
+                                                                <label class="fg-label" for="invtype">
+                                                                    Invoice Type
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-3 show">
+                                                        <div class="input-group fg-float">
+                                                            <span class="input-group-addon"/>
+                                                            <div class="fg-line p-t-5 fg-toggled">
+                                                                <input type="text"  id="invno" class="form-control">
+                                                                <label class="fg-label" for="invno">
+                                                                    Invoice Number
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3 show">
+                                                        <div class="input-group fg-float">
+                                                            <span class="input-group-addon"/>
+                                                            <div class="fg-line p-t-5 fg-toggled">
+                                                                <input type="text"  id="invstatus" class="form-control">
+                                                                <label class="fg-label" for="folio">
+                                                                    Invoice Status
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3 show">
+                                                        <div class="input-group fg-float">
+                                                            <span class="input-group-addon"/>
+                                                            <div class="fg-line p-t-5 fg-toggled">
+                                                                <input type="text"  id="invno" class="form-control">
+                                                                <label class="fg-label" for="folio">
+                                                                    Invoice Number
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                    <div class="row m-b-20">
+                                        <div class="col-xs-12 p-l-30">
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="invdate" class="form-control">
+                                                        <label class="fg-label" for="invdate">
+                                                            Invoice Date
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                <div class="fg-line p-t-5 fg-toggled">
+                                                        <label for="duedate" class="fg-label">Due Date</label>
+                                                        <input type="text"  id="duedate" class="form-control" />
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="paymenttype" class="form-control">
+                                                        <label class="fg-label" for="paymenttype">
+                                                            Payment Mode
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="salespersonid" class="form-control">
+                                                        <label class="fg-label" for="salespersonid">
+                                                            Salesperson
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                    <div class="row">
+                                            <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
+                                                    <h3><i class="mdi mdi-information-outline m-l-10  m-r-10"> </i>Order Information</h3>
+                                            </div>
+                                            <div class="col-xs-12 p-l-30 m-t-20"> 
+                                                <div class="col-sm-6 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <div class="fg-line p-t-5 fg-toggled">
+                                                            <input type="text"  id="orderno" class="form-control">
+                                                            <label class="fg-label" for="orderno">
+                                                                Order Number
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <div class="fg-line p-t-5 fg-toggled">
+                                                            <input type="text"  id="orderdate" class="form-control">
+                                                            <label class="fg-label" for="orderdate">
+                                                                Order Date
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           </div>         
+                                    </div>
+                                    <div class="row">
+                                            <div class="">
+                                                    <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
+                                                        <h3><i class="mdi mdi-format-list-bulleted m-l-10  m-r-10"> </i>Item Details</h3>
+                                                    </div>
+                                                    <div class="col-xs-12 p-l-30">
+                                                        <div class="table-responsive col-xs-12 document-table p-l-30 m-b-20"
+                                                                >
+                                                            <table class="table table-condensed">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="p-l-5 text-left" width="20%">Item Code</th>
+                                                                        <th class="p-l-5 text-left" width="20%">Item Name</th>
+                                                                        <th class="p-l-5 text-left" width="10%">Pattern</th>
+                                                                        <th class="p-l-5 text-left" width="10%">Quantity</th>
+                                                                        <th class="p-l-5 text-right" width="10%">Length (Per Item)</th>
+                                                                        <th class="p-l-5 text-right" width="10%">Meters</th>
+                                                                        <th class="p-l-5 text-right" width="10%">Weight</th>
+                                                                        <th class="p-l-5 text-right" width="10%">Rate</th>
+                                                                        <th class="p-l-5 text-right" width="10%">Amount</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>    
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
+                                                <h3><i class="mdi mdi-information-outline m-l-10  m-r-10"> </i>Additional Information</h3>
+                                        </div>
+                                        <div class="col-xs-12 p-l-30 m-t-20"> 
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="clearanceno" class="form-control">
+                                                        <label class="fg-label" for="clearanceno">
+                                                            Clearance Number
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="clearancedate" class="form-control">
+                                                        <label class="fg-label" for="clearancedate">
+                                                            Clearance Date
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="tostation" class="form-control">
+                                                        <label class="fg-label" for="tostation">
+                                                            Station
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 show">
+                                                <div class="input-group fg-float">
+                                                    <span class="input-group-addon"/>
+                                                    <div class="fg-line p-t-5 fg-toggled">
+                                                        <input type="text"  id="destination" class="form-control">
+                                                        <label class="fg-label" for="destination">
+                                                            Destination
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>         
+                                </div> 
+                                <div class="row">
+                                    <div class="col-xs-12 p-l-30 m-t-20"> 
+                                        <div class="col-sm-3 show">
+                                            <div class="input-group fg-float">
+                                                <span class="input-group-addon"/>
+                                                <div class="fg-line p-t-5 fg-toggled">
+                                                    <input type="text"  id="lrno" class="form-control">
+                                                    <label class="fg-label" for="lrno">
+                                                        Lorry Receipt Number
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 show">
+                                            <div class="input-group fg-float">
+                                                <span class="input-group-addon"/>
+                                                <div class="fg-line p-t-5 fg-toggled">
+                                                    <input type="text"  id="lrdate" class="form-control">
+                                                    <label class="fg-label" for="lrdate">
+                                                        Lorry Receipt Date
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 show">
+                                            <div class="input-group fg-float">
+                                                <span class="input-group-addon"/>
+                                                <div class="fg-line p-t-5 fg-toggled">
+                                                    <input type="text"  id="transportid" class="form-control">
+                                                    <label class="fg-label" for="transportid">
+                                                        Transport
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 show">
+                                            <div class="input-group fg-float">
+                                                <span class="input-group-addon"/>
+                                                <div class="fg-line p-t-5 fg-toggled">
+                                                    <input type="text"  id="transportamt" class="form-control">
+                                                    <label class="fg-label" for="transportamt">
+                                                        Transport Amount
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </div>         
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 p-l-30 m-t-20"> 
+                                    <div class="col-sm-3 show">
+                                        <div class="input-group fg-float">
+                                            <span class="input-group-addon"/>
+                                            <div class="fg-line p-t-5 fg-toggled">
+                                                <input type="text"  id="daysdue" class="form-control">
+                                                <label class="fg-label" for="daysdue">
+                                                    Days Due
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 show">
+                                        <div class="input-group fg-float">
+                                            <span class="input-group-addon"/>
+                                            <div class="fg-line p-t-5 fg-toggled">
+                                                <input type="text"  id="chequeno" class="form-control">
+                                                <label class="fg-label" for="chequeno">
+                                                    Cheque Number
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 show">
+                                        <div class="input-group fg-float">
+                                            <span class="input-group-addon"/>
+                                            <div class="fg-line p-t-5 fg-toggled">
+                                                <input type="text"  id="chequedate" class="form-control">
+                                                <label class="fg-label" for="chequedate">
+                                                    Cheque Date
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 show">
+                                        <div class="input-group fg-float">
+                                            <span class="input-group-addon"/>
+                                            <div class="fg-line p-t-5 fg-toggled">
+                                                <input type="text"  id="paymenttermsid" class="form-control">
+                                                <label class="fg-label" for="paymenttermsid">
+                                                    Payment Terms
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                               </div>         
+                        </div>
+                        <div class="row">
+                            <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
+                                    <h3><i class="mdi mdi-information-outline m-l-10  m-r-10"> </i>Calculations</h3>
+                            </div>
+                            <div class="col-xs-12 p-l-30 m-t-20"> 
+                                <div class="col-sm-2 show">
+                                    <div class="input-group fg-float">
+                                        <span class="input-group-addon"/>
+                                        <div class="fg-line p-t-5 fg-toggled">
+                                            <input type="text"  id="numberofparcel" class="form-control">
+                                            <label class="fg-label" for="numberofparcel">
+                                                Number Of Parcels
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 show">
+                                    <div class="input-group fg-float">
+                                        <span class="input-group-addon"/>
+                                        <div class="fg-line p-t-5 fg-toggled">
+                                            <input type="text"  id="totalweight" class="form-control">
+                                            <label class="fg-label" for="totalweight">
+                                                Weight
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 show">
+                                    <div class="input-group fg-float">
+                                        <span class="input-group-addon"/>
+                                        <div class="fg-line p-t-5 fg-toggled">
+                                            <input type="text"  id="freight" class="form-control">
+                                            <label class="fg-label" for="freight">
+                                                Freight
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 show">
+                                    <div class="input-group fg-float">
+                                        <span class="input-group-addon"/>
+                                        <div class="fg-line p-t-5 fg-toggled">
+                                            <input type="text"  id="totalpieces" class="form-control">
+                                            <label class="fg-label" for="totalpieces">
+                                                Quantity (Pcs)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 show">
+                                    <div class="input-group fg-float">
+                                        <span class="input-group-addon"/>
+                                        <div class="fg-line p-t-5 fg-toggled">
+                                            <input type="text"  id="totalmeters" class="form-control">
+                                            <label class="fg-label" for="totalmeters">
+                                                Meters
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 show">
+                                    <div class="input-group fg-float">
+                                        <span class="input-group-addon"/>
+                                        <div class="fg-line p-t-5 fg-toggled">
+                                            <input type="text"  id="wastepcs" class="form-control">
+                                            <label class="fg-label" for="wastepieces">
+                                                Waste Quantity (Pcs)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>         
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 p-l-30 m-t-20"> 
+                            <div class="col-sm-2 show">
+                                <div class="input-group fg-float">
+                                    <span class="input-group-addon"/>
+                                    <div class="fg-line p-t-5 fg-toggled">
+                                        <input type="text"  id="numberofparcel" class="form-control">
+                                        <label class="fg-label" for="wastemeters">
+                                            Waste Meters
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 show">
+                                <div class="input-group fg-float">
+                                    <span class="input-group-addon"/>
+                                    <div class="fg-line p-t-5 fg-toggled">
+                                        <input type="text"  id="discountpercent" class="form-control">
+                                        <label class="fg-label" for="discountpercent">
+                                            Discount %
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 show">
+                                <div class="input-group fg-float">
+                                    <span class="input-group-addon"/>
+                                    <div class="fg-line p-t-5 fg-toggled">
+                                        <input type="text"  id="discountamount" class="form-control">
+                                        <label class="fg-label" for="discountamount">
+                                            Discount Amount
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 show">
+                                <div class="input-group fg-float">
+                                    <span class="input-group-addon"/>
+                                    <div class="fg-line p-t-5 fg-toggled">
+                                        <input type="text"  id="adddiscountpercent" class="form-control">
+                                        <label class="fg-label" for="adddiscountpercent">
+                                           Additional Discount %
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 show">
+                                <div class="input-group fg-float">
+                                    <span class="input-group-addon"/>
+                                    <div class="fg-line p-t-5 fg-toggled">
+                                        <input type="text"  id="adddiscountamount" class="form-control">
+                                        <label class="fg-label" for="adddiscountamount">
+                                          Additional Discount Amount
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 show">
+                                <div class="input-group fg-float">
+                                    <span class="input-group-addon"/>
+                                    <div class="fg-line p-t-5 fg-toggled">
+                                        <input type="text"  id="packing" class="form-control">
+                                        <label class="fg-label" for="packing">
+                                            Packing Charge
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>         
+                </div>    
+                            <div class="m-t-15 row m-r-20 show" style="text-align: right">
+                                <button class="btn btn-danger waves-effect m-t-10">
+                                    Delete Invoice
+                                </button>
+                            </div>
+                                </div>
+                            </div>
+                            <!-- end card-box-->
+                        <!-- end wrapper -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/metisMenu.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+    </body>
+</html>
