@@ -24,9 +24,14 @@
             max-width: 100%;
             height: 105px;
             }
+        select {
+            height: 35px;
+            font-size: 16px;
+        }    
         </style>
     </head>
     <body>
+    <form class="form-add-invoice" action="#">    
         <section>
             <div class="">
                 <!-- Start content -->
@@ -41,10 +46,21 @@
                                             </a>
                                         </div>
                                     </div> -->
+                                    <!-- <div class="btn-group bootstrap-select" style="width: 100%;">
+                                            <button type="button" class="btn dropdown-toggle btn-default" tabindex="-1" title="Demo" style="position: relative; width: 100%; overflow: hidden; margin-top: 0px; padding-left: 1px; height: 35px; user-select: text;">
+                                               <div class="one-line text-transform-none" style="padding-right: 15px; text-align: left; width: 100%;"><span class="one-line">Demo</span></div>
+                                            </button>
+                                            <div class="dropdown-menu" style="width: 100%; border-top-left-radius: 0px;">
+                                               <div class="bs-searchbox"><input type="text" class="form-control form-margin" autocomplete="off" style="width: 100%;"></div>
+                                               <div class="dropdown-menu-inner m-b-10" role="menu" style="max-height: 50vh; overflow-y: auto; overflow-x: hidden; min-height: 10vh; width: 100%;">
+                                                  <ul class="" style="padding-left: 0px; list-style: none; max-height: 300px; height: auto;"></ul>
+                                               </div>
+                                            </div>
+                                         </div> -->
                                     <div class="row" style="display: inline;">
                                             <div class="card-header m-b-20">
                                                 <h2>
-                                                    <i class="mdi mdi-currency-usd"></i>Invoice
+                                                    <i class="mdi mdi-currency-inr"></i>Invoice
                                                         <div class="pull-left">
                                                             <a href="../../../index.html">
                                                                 <i class="mdi mdi-arrow-left"></i>
@@ -70,18 +86,18 @@
                                         <div class="col-sm-5 show">
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
-                                             <div class="fg-line p-t-5 fg-toggled">
+                                             <div class="fg-line p-t-5 ">
                                                     <label for="invoiceName" class="fg-label">From</label>
-                                                    <textarea class="form-control" rows="2" id="firmdetails"></textarea>
+                                                    <textarea class="form-control form-margin" rows="2" id="firmdetails"></textarea>
                                              </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 show">
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
-                                             <div class="fg-line p-t-5 fg-toggled">
+                                             <div class="fg-line p-t-5 ">
                                                     <label for="invoiceName" class="fg-label">Bill To Invoice Name</label>
-                                                    <textarea class="form-control" rows="2" id="customerdetails"></textarea>
+                                                    <textarea class="form-control form-margin" rows="2" id="customerdetails"></textarea>
                                              </div>
                                             </div>
                                         </div>
@@ -94,8 +110,12 @@
                                                     <div class="col-sm-3 show">
                                                         <div class="input-group fg-float">
                                                             <span class="input-group-addon"/>
-                                                            <div class="fg-line p-t-5 fg-toggled">
-                                                                <input type="text"  id="invtype" class="form-control">
+                                                            <div class="fg-line p-t-5 ">
+                                                                <select class="form-control form-margin form-select" id="invtype">
+                                                                        <option>Sales</option>
+                                                                        <option>Purchase</option>
+                                                                      </select>
+                                                                      
                                                                 <label class="fg-label" for="invtype">
                                                                     Invoice Type
                                                                 </label>
@@ -106,8 +126,8 @@
                                                     <div class="col-sm-3 show">
                                                         <div class="input-group fg-float">
                                                             <span class="input-group-addon"/>
-                                                            <div class="fg-line p-t-5 fg-toggled">
-                                                                <input type="text"  id="invno" class="form-control">
+                                                            <div class="fg-line p-t-5 ">
+                                                                <input type="text"  id="invno" class="form-control form-margin">
                                                                 <label class="fg-label" for="invno">
                                                                     Invoice Number
                                                                 </label>
@@ -117,8 +137,13 @@
                                                     <div class="col-sm-3 show">
                                                         <div class="input-group fg-float">
                                                             <span class="input-group-addon"/>
-                                                            <div class="fg-line p-t-5 fg-toggled">
-                                                                <input type="text"  id="invstatus" class="form-control">
+                                                            <div class="fg-line p-t-5 ">
+                                                                <select class="form-control form-margin form-select" id="invstatus">
+                                                                        <option>Active</option>
+                                                                        <option>InActive</option>
+                                                                        <option>Cancelled</option>
+                                                                        <option>Deleted</option>
+                                                                </select>
                                                                 <label class="fg-label" for="folio">
                                                                     Invoice Status
                                                                 </label>
@@ -128,8 +153,8 @@
                                                     <div class="col-sm-3 show">
                                                         <div class="input-group fg-float">
                                                             <span class="input-group-addon"/>
-                                                            <div class="fg-line p-t-5 fg-toggled">
-                                                                <input type="text"  id="invno" class="form-control">
+                                                            <div class="fg-line p-t-5 ">
+                                                                <input type="text"  id="invno" class="form-control form-margin">
                                                                 <label class="fg-label" for="folio">
                                                                     Invoice Number
                                                                 </label>
@@ -143,8 +168,8 @@
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="invdate" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <input type="text"  id="invdate" class="form-control form-margin">
                                                         <label class="fg-label" for="invdate">
                                                             Invoice Date
                                                         </label>
@@ -154,17 +179,20 @@
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                <div class="fg-line p-t-5 fg-toggled">
+                                                <div class="fg-line p-t-5 ">
                                                         <label for="duedate" class="fg-label">Due Date</label>
-                                                        <input type="text"  id="duedate" class="form-control" />
+                                                        <input type="text"  id="duedate" class="form-control form-margin" />
                                                 </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="paymenttype" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <select class="form-control form-margin form-select" id="paymenttype">
+                                                                <option>Cash</option>
+                                                                <option>Cheque</option>
+                                                              </select>
                                                         <label class="fg-label" for="paymenttype">
                                                             Payment Mode
                                                         </label>
@@ -174,8 +202,8 @@
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="salespersonid" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <input type="text"  id="salespersonid" class="form-control form-margin">
                                                         <label class="fg-label" for="salespersonid">
                                                             Salesperson
                                                         </label>
@@ -192,8 +220,8 @@
                                                 <div class="col-sm-6 show">
                                                     <div class="input-group fg-float">
                                                         <span class="input-group-addon"/>
-                                                        <div class="fg-line p-t-5 fg-toggled">
-                                                            <input type="text"  id="orderno" class="form-control">
+                                                        <div class="fg-line p-t-5 ">
+                                                            <input type="text"  id="orderno" class="form-control form-margin">
                                                             <label class="fg-label" for="orderno">
                                                                 Order Number
                                                             </label>
@@ -203,8 +231,8 @@
                                                 <div class="col-sm-6 show">
                                                     <div class="input-group fg-float">
                                                         <span class="input-group-addon"/>
-                                                        <div class="fg-line p-t-5 fg-toggled">
-                                                            <input type="text"  id="orderdate" class="form-control">
+                                                        <div class="fg-line p-t-5 ">
+                                                            <input type="text"  id="orderdate" class="form-control form-margin">
                                                             <label class="fg-label" for="orderdate">
                                                                 Order Date
                                                             </label>
@@ -244,14 +272,14 @@
                                     </div>
                                     <div class="row">
                                         <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
-                                                <h3><i class="mdi mdi-information-outline m-l-10  m-r-10"> </i>Additional Information</h3>
+                                                <h3><i class="mdi mdi-information-variant m-l-10  m-r-10"> </i>Additional Information</h3>
                                         </div>
                                         <div class="col-xs-12 p-l-30 m-t-20"> 
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="clearanceno" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <input type="text"  id="clearanceno" class="form-control form-margin">
                                                         <label class="fg-label" for="clearanceno">
                                                             Clearance Number
                                                         </label>
@@ -261,8 +289,8 @@
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="clearancedate" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <input type="text"  id="clearancedate" class="form-control form-margin">
                                                         <label class="fg-label" for="clearancedate">
                                                             Clearance Date
                                                         </label>
@@ -272,8 +300,8 @@
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="tostation" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <input type="text"  id="tostation" class="form-control form-margin">
                                                         <label class="fg-label" for="tostation">
                                                             Station
                                                         </label>
@@ -283,8 +311,8 @@
                                             <div class="col-sm-3 show">
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
-                                                    <div class="fg-line p-t-5 fg-toggled">
-                                                        <input type="text"  id="destination" class="form-control">
+                                                    <div class="fg-line p-t-5 ">
+                                                        <input type="text"  id="destination" class="form-control form-margin">
                                                         <label class="fg-label" for="destination">
                                                             Destination
                                                         </label>
@@ -298,8 +326,8 @@
                                         <div class="col-sm-3 show">
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
-                                                <div class="fg-line p-t-5 fg-toggled">
-                                                    <input type="text"  id="lrno" class="form-control">
+                                                <div class="fg-line p-t-5 ">
+                                                    <input type="text"  id="lrno" class="form-control form-margin">
                                                     <label class="fg-label" for="lrno">
                                                         Lorry Receipt Number
                                                     </label>
@@ -309,8 +337,8 @@
                                         <div class="col-sm-3 show">
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
-                                                <div class="fg-line p-t-5 fg-toggled">
-                                                    <input type="text"  id="lrdate" class="form-control">
+                                                <div class="fg-line p-t-5 ">
+                                                    <input type="text"  id="lrdate" class="form-control form-margin">
                                                     <label class="fg-label" for="lrdate">
                                                         Lorry Receipt Date
                                                     </label>
@@ -320,8 +348,8 @@
                                         <div class="col-sm-3 show">
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
-                                                <div class="fg-line p-t-5 fg-toggled">
-                                                    <input type="text"  id="transportid" class="form-control">
+                                                <div class="fg-line p-t-5 ">
+                                                    <input type="text"  id="transportid" class="form-control form-margin">
                                                     <label class="fg-label" for="transportid">
                                                         Transport
                                                     </label>
@@ -331,8 +359,8 @@
                                         <div class="col-sm-3 show">
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
-                                                <div class="fg-line p-t-5 fg-toggled">
-                                                    <input type="text"  id="transportamt" class="form-control">
+                                                <div class="fg-line p-t-5 ">
+                                                    <input type="text"  id="transportamt" class="form-control form-margin">
                                                     <label class="fg-label" for="transportamt">
                                                         Transport Amount
                                                     </label>
@@ -346,8 +374,8 @@
                                     <div class="col-sm-3 show">
                                         <div class="input-group fg-float">
                                             <span class="input-group-addon"/>
-                                            <div class="fg-line p-t-5 fg-toggled">
-                                                <input type="text"  id="daysdue" class="form-control">
+                                            <div class="fg-line p-t-5 ">
+                                                <input type="text"  id="daysdue" class="form-control form-margin">
                                                 <label class="fg-label" for="daysdue">
                                                     Days Due
                                                 </label>
@@ -357,8 +385,8 @@
                                     <div class="col-sm-3 show">
                                         <div class="input-group fg-float">
                                             <span class="input-group-addon"/>
-                                            <div class="fg-line p-t-5 fg-toggled">
-                                                <input type="text"  id="chequeno" class="form-control">
+                                            <div class="fg-line p-t-5 ">
+                                                <input type="text"  id="chequeno" class="form-control form-margin">
                                                 <label class="fg-label" for="chequeno">
                                                     Cheque Number
                                                 </label>
@@ -368,8 +396,8 @@
                                     <div class="col-sm-3 show">
                                         <div class="input-group fg-float">
                                             <span class="input-group-addon"/>
-                                            <div class="fg-line p-t-5 fg-toggled">
-                                                <input type="text"  id="chequedate" class="form-control">
+                                            <div class="fg-line p-t-5 ">
+                                                <input type="text"  id="chequedate" class="form-control form-margin">
                                                 <label class="fg-label" for="chequedate">
                                                     Cheque Date
                                                 </label>
@@ -379,8 +407,8 @@
                                     <div class="col-sm-3 show">
                                         <div class="input-group fg-float">
                                             <span class="input-group-addon"/>
-                                            <div class="fg-line p-t-5 fg-toggled">
-                                                <input type="text"  id="paymenttermsid" class="form-control">
+                                            <div class="fg-line p-t-5 ">
+                                                <input type="text"  id="paymenttermsid" class="form-control form-margin">
                                                 <label class="fg-label" for="paymenttermsid">
                                                     Payment Terms
                                                 </label>
@@ -391,14 +419,14 @@
                         </div>
                         <div class="row">
                             <div class="card-header m-b-20" style="background-color: white; border-bottom: white; height: 50px">
-                                    <h3><i class="mdi mdi-information-outline m-l-10  m-r-10"> </i>Calculations</h3>
+                                    <h3><i class="mdi mdi-calculator m-l-10  m-r-10"> </i>Calculations</h3>
                             </div>
                             <div class="col-xs-12 p-l-30 m-t-20"> 
                                 <div class="col-sm-2 show">
                                     <div class="input-group fg-float">
                                         <span class="input-group-addon"/>
-                                        <div class="fg-line p-t-5 fg-toggled">
-                                            <input type="text"  id="numberofparcel" class="form-control">
+                                        <div class="fg-line p-t-5 ">
+                                            <input type="text"  id="numberofparcel" class="form-control form-margin">
                                             <label class="fg-label" for="numberofparcel">
                                                 Number Of Parcels
                                             </label>
@@ -408,8 +436,8 @@
                                 <div class="col-sm-2 show">
                                     <div class="input-group fg-float">
                                         <span class="input-group-addon"/>
-                                        <div class="fg-line p-t-5 fg-toggled">
-                                            <input type="text"  id="totalweight" class="form-control">
+                                        <div class="fg-line p-t-5 ">
+                                            <input type="text"  id="totalweight" class="form-control form-margin">
                                             <label class="fg-label" for="totalweight">
                                                 Weight
                                             </label>
@@ -419,8 +447,8 @@
                                 <div class="col-sm-2 show">
                                     <div class="input-group fg-float">
                                         <span class="input-group-addon"/>
-                                        <div class="fg-line p-t-5 fg-toggled">
-                                            <input type="text"  id="freight" class="form-control">
+                                        <div class="fg-line p-t-5 ">
+                                            <input type="text"  id="freight" class="form-control form-margin">
                                             <label class="fg-label" for="freight">
                                                 Freight
                                             </label>
@@ -430,8 +458,8 @@
                                 <div class="col-sm-2 show">
                                     <div class="input-group fg-float">
                                         <span class="input-group-addon"/>
-                                        <div class="fg-line p-t-5 fg-toggled">
-                                            <input type="text"  id="totalpieces" class="form-control">
+                                        <div class="fg-line p-t-5 ">
+                                            <input type="text"  id="totalpieces" class="form-control form-margin">
                                             <label class="fg-label" for="totalpieces">
                                                 Quantity (Pcs)
                                             </label>
@@ -441,8 +469,8 @@
                                 <div class="col-sm-2 show">
                                     <div class="input-group fg-float">
                                         <span class="input-group-addon"/>
-                                        <div class="fg-line p-t-5 fg-toggled">
-                                            <input type="text"  id="totalmeters" class="form-control">
+                                        <div class="fg-line p-t-5 ">
+                                            <input type="text"  id="totalmeters" class="form-control form-margin">
                                             <label class="fg-label" for="totalmeters">
                                                 Meters
                                             </label>
@@ -452,8 +480,8 @@
                                 <div class="col-sm-2 show">
                                     <div class="input-group fg-float">
                                         <span class="input-group-addon"/>
-                                        <div class="fg-line p-t-5 fg-toggled">
-                                            <input type="text"  id="wastepcs" class="form-control">
+                                        <div class="fg-line p-t-5 ">
+                                            <input type="text"  id="wastepcs" class="form-control form-margin">
                                             <label class="fg-label" for="wastepieces">
                                                 Waste Quantity (Pcs)
                                             </label>
@@ -467,8 +495,8 @@
                             <div class="col-sm-2 show">
                                 <div class="input-group fg-float">
                                     <span class="input-group-addon"/>
-                                    <div class="fg-line p-t-5 fg-toggled">
-                                        <input type="text"  id="numberofparcel" class="form-control">
+                                    <div class="fg-line p-t-5 ">
+                                        <input type="text"  id="numberofparcel" class="form-control form-margin">
                                         <label class="fg-label" for="wastemeters">
                                             Waste Meters
                                         </label>
@@ -478,8 +506,8 @@
                             <div class="col-sm-2 show">
                                 <div class="input-group fg-float">
                                     <span class="input-group-addon"/>
-                                    <div class="fg-line p-t-5 fg-toggled">
-                                        <input type="text"  id="discountpercent" class="form-control">
+                                    <div class="fg-line p-t-5 ">
+                                        <input type="text"  id="discountpercent" class="form-control form-margin">
                                         <label class="fg-label" for="discountpercent">
                                             Discount %
                                         </label>
@@ -489,8 +517,8 @@
                             <div class="col-sm-2 show">
                                 <div class="input-group fg-float">
                                     <span class="input-group-addon"/>
-                                    <div class="fg-line p-t-5 fg-toggled">
-                                        <input type="text"  id="discountamount" class="form-control">
+                                    <div class="fg-line p-t-5 ">
+                                        <input type="text"  id="discountamount" class="form-control form-margin">
                                         <label class="fg-label" for="discountamount">
                                             Discount Amount
                                         </label>
@@ -500,8 +528,8 @@
                             <div class="col-sm-2 show">
                                 <div class="input-group fg-float">
                                     <span class="input-group-addon"/>
-                                    <div class="fg-line p-t-5 fg-toggled">
-                                        <input type="text"  id="adddiscountpercent" class="form-control">
+                                    <div class="fg-line p-t-5 ">
+                                        <input type="text"  id="adddiscountpercent" class="form-control form-margin">
                                         <label class="fg-label" for="adddiscountpercent">
                                            Additional Discount %
                                         </label>
@@ -511,8 +539,8 @@
                             <div class="col-sm-2 show">
                                 <div class="input-group fg-float">
                                     <span class="input-group-addon"/>
-                                    <div class="fg-line p-t-5 fg-toggled">
-                                        <input type="text"  id="adddiscountamount" class="form-control">
+                                    <div class="fg-line p-t-5 ">
+                                        <input type="text"  id="adddiscountamount" class="form-control form-margin">
                                         <label class="fg-label" for="adddiscountamount">
                                           Additional Discount Amount
                                         </label>
@@ -522,8 +550,8 @@
                             <div class="col-sm-2 show">
                                 <div class="input-group fg-float">
                                     <span class="input-group-addon"/>
-                                    <div class="fg-line p-t-5 fg-toggled">
-                                        <input type="text"  id="packing" class="form-control">
+                                    <div class="fg-line p-t-5 ">
+                                        <input type="text"  id="packing" class="form-control form-margin">
                                         <label class="fg-label" for="packing">
                                             Packing Charge
                                         </label>
@@ -537,6 +565,7 @@
                                     Delete Invoice
                                 </button>
                             </div>
+                            
                                 </div>
                             </div>
                             <!-- end card-box-->
@@ -545,6 +574,7 @@
                 </div>
             </div>
         </section>
+    </form>    
         <!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
