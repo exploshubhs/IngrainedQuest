@@ -16,8 +16,26 @@
         <link href="../../../assets/css/icons.css" rel="stylesheet" type="text/css" />
         <link href="../../../assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
         <link href="../../../assets/css/style.css" rel="stylesheet" type="text/css" />
-         <link href="../../../assets/css/forms-style.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/datepicker3.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+        <link href="../../../assets/css/forms-style.css" rel="stylesheet" type="text/css" />
+      
+         <!-- jQuery  -->
         <script src="../../../assets/js/modernizr.min.js"></script>
+        <script src="../../../assets/js/form-javascript.js"></script>
+        <script src="../../../assets/js/jquery.min.js"></script>
+        <script src="../../../assets/js/popper.min.js"></script>
+        <script src="../../../assets/js/bootstrap.min.js"></script>
+        <script src="../../../assets/js/bootstrap-datepicker.min.js"></script>
+        <script src="../../../assets/js/bootstrap-select.min.js"></script>
+        <script src="../../../assets/js/metisMenu.min.js"></script>
+        <script src="../../../assets/js/waves.js"></script>
+        <script src="../../../assets/js/jquery.slimscroll.js"></script>
+
+        <!-- App js -->
+        <script src="../../../assets/js/jquery.core.js"></script>
+        <script src="../../../assets/js/jquery.app.js"></script>
         <style>
         img {
              display: block;
@@ -28,7 +46,57 @@
             height: 35px;
             font-size: 16px;
         }    
+        #myInput {
+    padding: 20px;
+    margin-top: -6px;
+    border: 0;
+    border-radius: 0;
+    background: #f1f1f1;
+  }
         </style>
+        <script>
+            var $ = jQuery;
+            $(document).ready(function(){ 
+              var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+              var options={
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+              };
+              var invoice_date_input=$('input[name="invdate"]');
+              invoice_date_input.datepicker(options);
+
+
+              var due_date_input=$('input[name="duedate"]');
+              due_date_input.datepicker(options);
+
+
+              var order_date_input=$('input[name="orderdate"]');
+              order_date_input.datepicker(options);
+
+
+              var clearance_date_input=$('input[name="clearancedate"]');
+              clearance_date_input.datepicker(options);
+
+
+              var lr_date_input=$('input[name="lrdate"]');
+              lr_date_input.datepicker(options);
+
+
+              var cheque_date_input=$('input[name="chequedate"]');
+              cheque_date_input.datepicker(options);
+             
+              $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-menu li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+            })
+           </script>
+          
     </head>
     <body>
     <form class="form-add-invoice" action="#">    
@@ -46,17 +114,25 @@
                                             </a>
                                         </div>
                                     </div> -->
-                                    <!-- <div class="btn-group bootstrap-select" style="width: 100%;">
-                                            <button type="button" class="btn dropdown-toggle btn-default" tabindex="-1" title="Demo" style="position: relative; width: 100%; overflow: hidden; margin-top: 0px; padding-left: 1px; height: 35px; user-select: text;">
-                                               <div class="one-line text-transform-none" style="padding-right: 15px; text-align: left; width: 100%;"><span class="one-line">Demo</span></div>
+                                    <!-- <select class="selectpicker" data-show-subtext="true" data-live-search="true">
+                                            <option data-subtext="Rep California">Tom Foolery</option>
+                                            <option data-subtext="Sen California">Bill Gordon</option>
+                                            <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+                                            <option data-subtext="Rep Alabama">Mario Flores</option>
+                                            <option data-subtext="Rep Alaska">Don Young</option>
+                                            <option data-subtext="Rep California" disabled="disabled">Marvin Martinez</option>
+                                    </select> -->
+                                    <!-- <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Dropdown button
                                             </button>
-                                            <div class="dropdown-menu" style="width: 100%; border-top-left-radius: 0px;">
-                                               <div class="bs-searchbox"><input type="text" class="form-control form-margin" autocomplete="off" style="width: 100%;"></div>
-                                               <div class="dropdown-menu-inner m-b-10" role="menu" style="max-height: 50vh; overflow-y: auto; overflow-x: hidden; min-height: 10vh; width: 100%;">
-                                                  <ul class="" style="padding-left: 0px; list-style: none; max-height: 300px; height: auto;"></ul>
-                                               </div>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                              <a class="dropdown-item" href="#">Action</a>
+                                              <a class="dropdown-item" href="#">Another action</a>
+                                              <a class="dropdown-item" href="#">Something else here</a>
                                             </div>
-                                         </div> -->
+                                          </div>      -->
+                                          
                                     <div class="row" style="display: inline;">
                                             <div class="card-header m-b-20">
                                                 <h2>
@@ -138,12 +214,25 @@
                                                         <div class="input-group fg-float">
                                                             <span class="input-group-addon"/>
                                                             <div class="fg-line p-t-5 ">
-                                                                <select class="form-control form-margin form-select" id="invstatus">
+                                                                <!-- <select class="form-control form-margin form-select selectpicker" data-show-subtext="true" data-live-search="true" id="invstatus">
                                                                         <option>Active</option>
                                                                         <option>InActive</option>
                                                                         <option>Cancelled</option>
                                                                         <option>Deleted</option>
-                                                                </select>
+                                                                </select> -->
+                                                                <div class="dropdown">
+                                                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                                                                        <span class="caret"></span></button>
+                                                                        <ul class="dropdown-menu">
+                                                                          <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                                                                          <li><a href="#">HTML</a></li>
+                                                                          <li><a href="#">CSS</a></li>
+                                                                          <li><a href="#">JavaScript</a></li>
+                                                                          <li><a href="#">jQuery</a></li>
+                                                                          <li><a href="#">Bootstrap</a></li>
+                                                                          <li><a href="#">Angular</a></li>
+                                                                        </ul>
+                                                                </div>      
                                                                 <label class="fg-label" for="folio">
                                                                     Invoice Status
                                                                 </label>
@@ -169,7 +258,8 @@
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
                                                     <div class="fg-line p-t-5 ">
-                                                        <input type="text"  id="invdate" class="form-control form-margin">
+                                                        <!-- <input type="text"  id="invdate" class="form-control form-margin"> -->
+                                                        <input class="form-control form-control form-margin date" id="invdate" name="invdate" placeholder="MM/DD/YYY" type="text"/>
                                                         <label class="fg-label" for="invdate">
                                                             Invoice Date
                                                         </label>
@@ -181,7 +271,8 @@
                                                     <span class="input-group-addon"/>
                                                 <div class="fg-line p-t-5 ">
                                                         <label for="duedate" class="fg-label">Due Date</label>
-                                                        <input type="text"  id="duedate" class="form-control form-margin" />
+                                                        <!-- <input type="text"  id="duedate" class="form-control form-margin" /> -->
+                                                        <input class="form-control form-control form-margin date" id="duedate" name="duedate" placeholder="MM/DD/YYY" type="text"/>
                                                 </div>
                                                 </div>
                                             </div>
@@ -232,7 +323,8 @@
                                                     <div class="input-group fg-float">
                                                         <span class="input-group-addon"/>
                                                         <div class="fg-line p-t-5 ">
-                                                            <input type="text"  id="orderdate" class="form-control form-margin">
+                                                            <!-- <input type="text"  id="orderdate" class="form-control form-margin"> -->
+                                                            <input class="form-control form-control form-margin date" id="orderdate" name="orderdate" placeholder="MM/DD/YYY" type="text"/>
                                                             <label class="fg-label" for="orderdate">
                                                                 Order Date
                                                             </label>
@@ -290,7 +382,8 @@
                                                 <div class="input-group fg-float">
                                                     <span class="input-group-addon"/>
                                                     <div class="fg-line p-t-5 ">
-                                                        <input type="text"  id="clearancedate" class="form-control form-margin">
+                                                        <!-- <input type="text"  id="clearancedate" class="form-control form-margin"> -->
+                                                        <input class="form-control form-control form-margin date" id="clearancedate" name="clearancedate" placeholder="MM/DD/YYY" type="text"/>
                                                         <label class="fg-label" for="clearancedate">
                                                             Clearance Date
                                                         </label>
@@ -338,7 +431,8 @@
                                             <div class="input-group fg-float">
                                                 <span class="input-group-addon"/>
                                                 <div class="fg-line p-t-5 ">
-                                                    <input type="text"  id="lrdate" class="form-control form-margin">
+                                                    <!-- <input type="text"  id="lrdate" class="form-control form-margin"> -->
+                                                    <input class="form-control form-control form-margin date" id="lrdate" name="lrdate" placeholder="MM/DD/YYY" type="text"/>
                                                     <label class="fg-label" for="lrdate">
                                                         Lorry Receipt Date
                                                     </label>
@@ -397,7 +491,8 @@
                                         <div class="input-group fg-float">
                                             <span class="input-group-addon"/>
                                             <div class="fg-line p-t-5 ">
-                                                <input type="text"  id="chequedate" class="form-control form-margin">
+                                                <!-- <input type="text"  id="chequedate" class="form-control form-margin"> -->
+                                                <input class="form-control form-control form-margin date" id="chequedate" name="chequedate" placeholder="MM/DD/YYY" type="text"/>
                                                 <label class="fg-label" for="chequedate">
                                                     Cheque Date
                                                 </label>
@@ -575,16 +670,5 @@
             </div>
         </section>
     </form>    
-        <!-- jQuery  -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/metisMenu.min.js"></script>
-        <script src="assets/js/waves.js"></script>
-        <script src="assets/js/jquery.slimscroll.js"></script>
-
-        <!-- App js -->
-        <script src="assets/js/jquery.core.js"></script>
-        <script src="assets/js/jquery.app.js"></script>
     </body>
 </html>
