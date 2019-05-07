@@ -1,0 +1,143 @@
+<div class="">
+<div class="">
+                                    <div >
+                                        <div class="row">
+                                            <div class="card-header m-b-20">
+                                                <h2>
+                                                    <i class="mdi mdi-money-box m-r-15"/>Invoice
+                                                </h2>
+                                                    <div class="btn-demo pull-right btn-m-t-m24 edit-action-button">
+                                                        <span class="btn-icon">
+                                                            <i class="btn btn-link btn-icon m-r-10 mdi mdi-close mdi-hc-fw"
+                                                               onClick={this.onCancelClick}/>
+                                                        </span>
+                                                        <button
+                                                            class="btn btn-primary btn-icon waves-effect waves-circle waves-float"
+                                                            onClick={this.onSaveClick}>
+                                                            <i class="mdi mdi-check mdi-hc-fw"/> 
+                                                        </button>
+                                                    </div>
+                                                    <div class="btn-demo pull-right btn-m-t-m24 edit-action-button">
+                                                        <button
+                                                            class="btn btn-primary btn-icon waves-effect waves-circle waves-float"
+                                                            onClick={this.onEditClick}>
+                                                            <i class="mdi mdi-edit mdi-hc-fw"/> 
+                                                        </button>
+                                                    </div>
+                                            </div>
+                
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-6 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <label for="invoiceName">Invoice Name</label>
+                                                        <input type="text"  id="invoiceName">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <label for="periodStart">Period Start</label>
+                                                        <input type="text"  id="periodStart">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <label for="periodEnd">Period End</label>
+                                                        <input type="text"  id="periodEnd">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <div class="fg-line p-t-5 fg-toggled">
+                                                            <input type="text"  id="folio">
+                                                            <label class="fg-label" for="folio">
+                                                                Folio Billed
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 dropdown-with-link show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <div class="fg-line primary-contact-btn fg-toggled primary-contact edit-mode">
+                                                                <input type="text"  id="accountBilled">
+                                                            <label class="fg-label" for="accountBilled">
+                                                                Account Billed
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 dropdown-with-link ">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <div class="fg-line primary-contact-btn fg-toggled primary-contact edit-mode">
+                                                                <input type="text"  id="accountDebited">
+                                                            <label class="fg-label" for="accountDebited">
+                                                                Account Debited
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class={"col-sm-6 show">
+                                                    <div class="input-group fg-float">
+                                                        <span class="input-group-addon"/>
+                                                        <div class="fg-line fg-toggled">
+                                                                <input type="text"  id="feeSchedule">
+                                                            <label class="fg-label" for="feeSchedule">
+                                                                Fee Schedule
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="card-header m-b-20">
+                                                <h2><i class="mdi mdi-format-list-bulleted m-r-20" />Transactions</h2>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-6 m-b-15">
+                                                    <label><input type="checkbox" value=""  class="m-l-30 display-inline">Invoice Only</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 p-l-30">
+                                                <div class="table-responsive col-xs-12 document-table p-l-30 m-b-20"
+                                                     style="overflow:visible">
+                                                    <table class={"table table-condensed"}>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="p-l-5 text-left" width="30%">Account</th>
+                                                                <th class="p-l-5 text-left" width="30%">Security</th>
+                                                                <th class="p-l-5 text-left" width="10%">Trade Date</th>
+                                                                <th class="p-l-5 text-left" width="20%">Activity Type</th>
+                                                                <th class="p-l-5 text-right" width="10%">Amount</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row show">
+                                            <div class="card-header m-b-20">
+                                                <h2><i class="mdi mdi-info-outline m-r-20" />Fee Information</h2>
+                                            </div>
+                                            <div style="padding-left: 50px; padding-right: 25px">
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="m-t-15 row m-r-20 show"
+                                             style="text-align: right">
+                                            <button class="btn btn-danger waves-effect m-t-10">
+                                                Delete Invoice
+                                            </button>
+                                        </div>
+                                    </div>
+                                    </div>     
+                                </div>  
+
